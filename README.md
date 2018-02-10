@@ -10,11 +10,11 @@ I have to apologize in advance that my expertise in computer engineering is obvi
 ## Suggestions for Statisticians
  1. For small datasets, 1~20 vertices/distance matrix with dim<=20. 
  I suggest **TDA(R-package)-R** synthesis. 
- I wrote a R interface with extended visualization features here.
+ I wrote a R interface with extended visualization features [here](https://github.com/hrluo/PHPL/tree/master/TDA-R).
  
  2. For medium datasets, 20~500 vertices/distance matrix with dim<=500. 
  I suggest **Perseus-R** synthesis.
-  I wrote a R interface with extended visualization features here.
+  I wrote a R interface with extended visualization features [here](https://github.com/hrluo/PHPL/tree/master/Perseus-R).
   
  3. For large datasets, >=500 vertices/distance matrix  with dim>=500. 
  I suggest either **Dionysus-Python** OR **JavaPlex-Matlab** synthesis.
