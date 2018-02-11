@@ -65,7 +65,7 @@ for(d in 0:(dimension-dim_adjust)){
     #print(phData)
   }
 }
-#Plotting fearue
+#Plotting featrue
 par(mfrow=c(2,2))
 plot(df[,1],df[,2],main=paste('Data Plot, N=',N),type='o')
 

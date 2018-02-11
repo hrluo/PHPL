@@ -9,9 +9,9 @@ weights=c(1/3,1/3,1/3)
 initialPoint=c(1/2,sqrt(3)/2)
 df=as.data.frame(matrix(NA,nrow=1,ncol=2))
 df[1,]=initialPoint
-thinning=1000
+thinning=100
 counter=2
-for(i in 1:100000){
+for(i in 1:10000){
   chooser=rmultinom(n=1,size=1,prob=weights)
   whichTransform<-which(chooser[,1]==1)
   if(whichTransform==1){
