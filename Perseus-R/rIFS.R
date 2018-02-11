@@ -6,7 +6,7 @@ Transforma2d<-function(a,b,c,d,e,f){
   return(list(A=mat,b=translation))
 }
 weights=c(1/3,1/3,1/3)
-initialPoint=c(0,0)
+initialPoint=c(1/2,sqrt(3)/2)
 df=as.data.frame(matrix(NA,nrow=1,ncol=2))
 df[1,]=initialPoint
 thinning=1000
@@ -32,6 +32,6 @@ for(i in 1:100000){
 }
 par(mfrow=c(1,1))
 plot(df,type='o',xlim=c(0,1),ylim=c(0,1))
-points(0,0,col='red')
+points(initialPoint[1],initialPoint[2],col='red')
 filenam=paste("tmp.csv", sep="")
 write.csv(df,filenam)

@@ -40,8 +40,10 @@ for(d in 0:dimension){
   }
 }
 
+if(Sys.info()['sysname']=='Windows'){perseusOS<-'perseusWin'}
+if(Sys.info()['sysname']=='Linux'){perseusOS<-'./perseusLin'}
 
-cmd=paste("perseusWin distmat ",inputtxt," ",outputData,sep='')
+cmd=paste(perseusOS," distmat ",inputtxt," ",outputData,sep='')
 system(cmd)
 #res<-read.table(outputData)
 BettiVector<-read.table(paste(outputData,'_betti.txt',sep=""),header=F)
