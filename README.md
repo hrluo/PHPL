@@ -17,7 +17,7 @@ I have to apologize in advance that my expertise in computer engineering is obvi
   I wrote a R interface with extended visualization features [here](https://github.com/hrluo/PHPL/tree/master/Perseus-R).
   
  3. For large datasets, >=500 vertices/distance matrix  with dim>=500. 
- I suggest either **Dionysus-Python** OR **JavaPlex-Matlab** synthesis.
+ I suggest either **Dionysus-Python** OR **JavaPlex-Matlab** synthesis. [here](https://github.com/hrluo/PHPL/tree/master/JavaPlex4-R).
 
 ## Acknowledgment
 The order is purely due to the time I got access to each of following sources, I appreciated all these brilliant people who helped me in building this piece of 
