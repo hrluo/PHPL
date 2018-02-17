@@ -24,5 +24,22 @@ function prfunc = PRF(data_point_cloud,Betti_dimension,a,b)
     ab_Betti = ab_intervals.getInfiniteIntervals.getBettiSequence();
     % The persistent rank function is obtained from taking the difference
     % between Betti numbers of two different VR complexes.
-    prfunc = ab_Betti(Betti_dimension,1)-aa_Betti(Betti_dimension,1);
+    % disp(aa_Betti)
+    % disp(ab_Betti)
+    maximal_nonzero_aa_Betti=size(aa_Betti);
+    maximal_nonzero_aa_Betti=maximal_nonzero_aa_Betti(2);
+    maximal_nonzero_ab_Betti=size(ab_Betti);
+    maximal_nonzero_ab_Betti=maximal_nonzero_ab_Betti(2);
+    
+    if maximal_nonzero_aa_Betti<Betti_dimension+1
+        aa_Betti_number=0;
+    else
+        aa_Betti_number=aa_Betti(Betti_dimension + 1,1);
+    end
+    if maximal_nonzero_ab_Betti<Betti_dimension+1
+        ab_Betti_number=0;
+    else
+        ab_Betti_number=ab_Betti(Betti_dimension + 1,1);
+    end
+    prfunc = ab_Betti_number-aa_Betti_number;
 end
