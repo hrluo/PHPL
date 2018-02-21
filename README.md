@@ -18,6 +18,8 @@ I have to apologize in advance that my expertise in computer engineering is obvi
   
  3. For large datasets, >=500 vertices/distance matrix  with dim>=500. 
  I suggest either **Dionysus-Python** OR **JavaPlex-Matlab** synthesis. [here](https://github.com/hrluo/PHPL/tree/master/JavaPlex4-R). **Note that JavaPlex is not the fastest implementation (Perseus is), and it has relatively inefficient memory management; but it is relatively easy to extend to parallel computing environment.**
+ 
+ 4. For multidimensional persistence, the only software implementation at the moment is **RIVET** [here](https://github.com/rivetTDA/rivet), note that its capacity is still limited to 200~500 data points for Vietoris-Rips filtration.
 
 ## Acknowledgment
 The order is purely due to the time I got access to each of following sources, I appreciated all these brilliant people who helped me in building this piece of 
