@@ -61,7 +61,7 @@ make -j4 all
 make -j4 install
 make install_FindCGAL
 ```
-
+In any case CGAL fail to find BOOST libraries, just make a copy of the missing libraries under `C:\Program Files\boost\lib` and simply chop off any description about how it is compiled. (Do not worry about that, it is simply equivalent to change FindBOOST in CMake.) Run again.
 # Reference
 https://gist.github.com/sim642/29caef3cc8afaa273ce6#installing-boost-libraries-for-gcc-mingw-on-windows
 https://github.com/tudelft3d/masbcpp/wiki/Building-on-Windows-with-CMake-and-MinGW
