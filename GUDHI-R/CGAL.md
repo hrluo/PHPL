@@ -8,6 +8,7 @@ MinGW is a collection of the open-source softwares that are popular in Linux, wh
 3. Download and install [Python 3.5 or later](https://www.python.org/). If you already have installed Python 3.5 or later, type in `cmd` the pip package manager `pip install Cython`. Alternatively, we install [Cython](http://cython.org/) by running the accompanying `setup.py`.
 
 # Step 2: Installing boost libraries for  MinGW on Windows
+## WARNING: Do not go to boost version >=1.66, which introduces a lot of new stuffs incompatible with CMake.
 
 ### Folder setup
 1. Extract downloaded `tar.gz` boost source [Boost C++ Library](https://dl.bintray.com/boostorg/release/), e.g. `C:\Program Files\boost_1_66_0`.
@@ -37,19 +38,19 @@ cd "..\.."
 4. Add `C:\Program Files\boost-build\bin` to Windows environmental variable PATH.
 
 ### Boost building
-1. Open Command Prompt and navigate to `C:\Program Files\boost_1_66_0`.
+1. Open Command Prompt and navigate to `C:\Program Files\boost_1_65_0`.
 2. Run following commands to install the boost build
 ```
 b2 --build-dir="C:\Program Files\boost_1_66_0\build" --prefix="C:\Program Files\boost" toolset=gcc install
 ```
 
 ### Python Project setup
-1. Add include folder, i.e. `C:\Program Files\boost\include\boost-1_66`.
+1. Add include folder, i.e. `C:\Program Files\boost\include\boost-1_65`.
 2. Add linker folder, i.e. `C:\Program Files\boost\lib`.
-3. Link required libraries, e.g. `libboost_regex-mgw48-mt-1_66.a`.
+3. Link required libraries, e.g. `libboost_regex-mgw48-mt-1_65.a`.
 
 # Step 3: CMake with MinGW setups
-Before we install CGAL we need to `C:\Program Files\boost\include\boost-1_66` into PATH in any case CMake cannot detect the existence of BOOST libraries.
+Before we install CGAL we need to `C:\Program Files\boost\include\boost-1_65` into PATH in any case CMake cannot detect the existence of BOOST libraries.
 Navigate to the extracted folder of CGAL and execute the following commands:
 If you use CMake-gui, tick the checkbox "Advanced" (between checkbox "Grouped" and button "Add Entry")and the checkbox "CGAL_Boost_USE_STATIC_LIBS".
 ```
