@@ -23,8 +23,8 @@ Boost library is a collection of convenient C++ commands that many CMake depende
 
 ### Boost.Build setup
 1. Open Command Prompt and navigate to `C:\Program Files\boost_1_66_0\tools\build`.
-2. Run `bootstrap.bat mingw` or `bootstrap.bat gcc`.
-3. Run `b2 install --prefix="C:\Program Files\boost-build"`.
+2. Run `bootstrap.bat gcc`.
+3. Run `b2 install --prefix="C:\Program Files\boost-build" --toolset="gcc"`.
 4. Add `C:\Program Files\boost-build\bin` to Windows environmental variable PATH.
 
 ### Boost building
