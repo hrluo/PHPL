@@ -15,6 +15,7 @@ Boost library is a collection of convenient C++ commands that many CMake depende
 3. Create a folder for Boost.Build installation, e.g. `C:\Program Files\boost-build`, this folder will be used for building Boost libraries. 
 4. Create a folder within for building, i.e. `C:\Program Files\boost_1_66_0\build`.
 5. Create a folder for installation, e.g. `C:\Program Files\boost`.
+Alternatively, I followed this https://jaimes.net/718/how-to-install-the-c-boost-libraries-on-windows/
 
 ### GCC setup
 1. Open Command Prompt.
