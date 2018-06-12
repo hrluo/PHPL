@@ -67,3 +67,4 @@ https://gist.github.com/sim642/29caef3cc8afaa273ce6#installing-boost-libraries-f
 https://github.com/tudelft3d/masbcpp/wiki/Building-on-Windows-with-CMake-and-MinGW
 https://ethiy.github.io/2016/12/27/CGAL/
 https://stackoverflow.com/questions/13280823/cmake-not-finding-boost
+https://xinyustudio.wordpress.com/2012/07/18/setup-cgal-in-windows-7-step-by-step-tutorial/
