@@ -51,3 +51,4 @@ mingw32-make
 # Reference
 https://gist.github.com/sim642/29caef3cc8afaa273ce6#installing-boost-libraries-for-gcc-mingw-on-windows
 https://github.com/tudelft3d/masbcpp/wiki/Building-on-Windows-with-CMake-and-MinGW
+https://ethiy.github.io/2016/12/27/CGAL/
