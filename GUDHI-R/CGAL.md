@@ -23,7 +23,15 @@ Boost library is a collection of convenient C++ commands that many CMake depende
 
 ### Boost.Build setup
 1. Open Command Prompt and navigate to `C:\Program Files\boost_1_66_0\tools\build`.
-2. Run `bootstrap.bat gcc`.
+2. Run `bootstrap.bat gcc` and 
+```
+cd "C:\Path\to\Boost\tools\build"
+.\bootstrap
+.\b2 install -j4 --build-type=minimal --toolset=gcc
+cd "..\.."
+.\bootstrap
+.\b2 install -j4 --build-type=minimal --toolset=gcc
+```
 3. Run `b2 install --prefix="C:\Program Files\boost-build" --toolset="gcc"`.
 4. Add `C:\Program Files\boost-build\bin` to Windows environmental variable PATH.
 
@@ -40,15 +48,22 @@ b2 --build-dir="C:\Program Files\boost_1_66_0\build" --prefix="C:\Program Files\
 3. Link required libraries, e.g. `libboost_regex-mgw48-mt-1_66.a`.
 
 # Step 3: CMake with MinGW setups
+Before we install CGAL we need to `C:\Program Files\boost\include\boost-1_66` into PATH in any case CMake cannot detect the existence of BOOST libraries.
 Navigate to the extracted folder of CGAL and execute the following commands:
+If you use CMake-gui, tick the checkbox "Advanced" (between checkbox "Grouped" and button "Add Entry")and the checkbox "CGAL_Boost_USE_STATIC_LIBS".
 ```
+cd "C:\Path\to\CGAL"
 mkdir build
 cd build
-cmake .. -G "MinGW Makefiles"
-mingw32-make
+
+cmake -G "MinGW Makefiles" ..
+make -j4 all
+make -j4 install
+make install_FindCGAL
 ```
 
 # Reference
 https://gist.github.com/sim642/29caef3cc8afaa273ce6#installing-boost-libraries-for-gcc-mingw-on-windows
 https://github.com/tudelft3d/masbcpp/wiki/Building-on-Windows-with-CMake-and-MinGW
 https://ethiy.github.io/2016/12/27/CGAL/
+https://stackoverflow.com/questions/13280823/cmake-not-finding-boost
